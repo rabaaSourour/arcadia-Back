@@ -1,0 +1,24 @@
+$Recycle.Bin/
+Documents and Settings/
+ProgramData/
+Recovery/
+System Volume Information/
+Windows/
+# Ignore system files and directories
+$Recycle.Bin/
+*.log
+*.tmp
+*.sys
+
+# Ignore user directories
+Documents and Settings/
+Users/
+ProgramData/
+Program Files/
+Program Files (x86)/
+Windows/
+
+# Ignore specific project files
+.DS_Store
+node_modules/
+.env

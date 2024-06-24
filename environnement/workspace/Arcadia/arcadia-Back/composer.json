@@ -1,0 +1,17 @@
+{
+    "name": "arcadia/zoo",
+    "description": "un systéme de gestion pour le zoo Arcadia",
+    "autoload": {
+        "psr-4": {
+            "Router\\":"routes/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Rabaa sourour",
+            "email": "so.gomgom@gmail.com"
+        }
+    ],
+    "require": {}
+}
