@@ -2,11 +2,10 @@
 
 class Router {
     public $url;
-    public $routes =[];
+    public $routes = [];
 
-    // Corrected constructor
     public function __construct($url) {
-        $this->url = trim ($url, '/');
+        $this->url = trim($url, '/');
     }
 
     public function get(string $path, string $action){

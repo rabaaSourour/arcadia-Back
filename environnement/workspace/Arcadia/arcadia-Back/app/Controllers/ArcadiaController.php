@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class BlogController {
+class ArcadiaController {
 
     public function index(){
         echo 'Je suis la homepage';
