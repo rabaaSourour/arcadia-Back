@@ -1,4 +1,7 @@
 <?php
+
+require 'ApiTokenAuthenticator.php';
+require 'config.php';
 use Router\Router;
 
 require '../vendor/autoload.php';
@@ -87,3 +90,20 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 } catch (PDOException $e) {
     echo 'Impossible de récupérer la liste des utilisateurs' . $e->getMessage();
 }
+
+
+session_start();
+
+// Vérifier si l'utilisateur est connecté
+if (!isset($_SESSION['user_id'])) {
+    // Redirection vers la page de connexion si l'utilisateur n'est pas connecté
+    header('Location: login.html');
+    exit;
+}
+
+// Le reste du contenu de votre page protégée
+echo "Bonjour " . $_SESSION['user_firstname'] . " " . $_SESSION['user_lastname'] . "! Bienvenue sur votre espace protégé.";
+
+// Exemple de lien de déconnexion
+echo '<br><br><a href="logout.php">Se déconnecter</a>';
+?>
